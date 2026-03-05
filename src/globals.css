@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-primary: #1a56db;
+  --brand-secondary: #0e9f6e;
+  --brand-danger: #e02424;
+  --brand-warning: #ff5a1f;
+  --bg-base: #f0f4f8;
+  --text-primary: #111928;
+  --text-secondary: #6b7280;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+  overscroll-behavior: none;
+}
+
+/* Bottom nav spacing */
+.page-content {
+  padding-bottom: 80px;
+}
+
+/* Large tap targets */
+button, .tap-target {
+  min-height: 44px;
+}
+
+/* Status badges */
+.badge-draft { @apply bg-gray-100 text-gray-700; }
+.badge-submitted { @apply bg-blue-100 text-blue-700; }
+.badge-authorized { @apply bg-green-100 text-green-700; }
+.badge-active { @apply bg-emerald-100 text-emerald-700; }
+.badge-closed { @apply bg-gray-200 text-gray-600; }
+.badge-cancelled { @apply bg-red-100 text-red-600; }
+.badge-open { @apply bg-orange-100 text-orange-700; }
+.badge-critical { @apply bg-red-100 text-red-700; }
+.badge-high { @apply bg-orange-100 text-orange-700; }
+
+/* Card */
+.field-card {
+  @apply bg-white rounded-2xl shadow-sm border border-gray-100 p-4;
+}
+
+/* Input */
+.field-input {
+  @apply w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
